@@ -14,5 +14,8 @@
     <string name="add">Add</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="home_fragment">Home</string>
+    <string name="search_fragment">Search</string>
+    <string name="favorite_fragment">Favorite</string>
 
 </resources>

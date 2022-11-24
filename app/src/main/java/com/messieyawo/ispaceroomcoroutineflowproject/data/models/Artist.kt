@@ -1,23 +1,26 @@
 package com.messieyawo.ispaceroomcoroutineflowproject.data.models
 
-
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class Artist(
     @SerializedName("id")
-    val id: Int?,
+    val id: Int,
     @SerializedName("name")
-    val name: String?,
+    val name: String,
     @SerializedName("picture")
-    val picture: String?,
+    val picture: String,
     @SerializedName("picture_big")
-    val pictureBig: String?,
+    val pictureBig: String,
     @SerializedName("picture_medium")
-    val pictureMedium: String?,
+    val pictureMedium: String,
     @SerializedName("picture_small")
-    val pictureSmall: String?,
+    val pictureSmall: String,
     @SerializedName("picture_xl")
-    val pictureXl: String?,
+    val pictureXl: String,
+    @SerializedName("radio")
+    val radio: Boolean,
+    @SerializedName("traclist")
+    val trackList: String,
     @SerializedName("type")
-    val type: String?
+    val type: String
 )
