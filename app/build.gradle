@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id "androidx.navigation.safeargs.kotlin"
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -64,5 +65,4 @@ dependencies {
     //logging interceptor
     //okhttp for logging
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
-
 }

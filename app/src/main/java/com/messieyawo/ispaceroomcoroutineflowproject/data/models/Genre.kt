@@ -1,23 +1,16 @@
 package com.messieyawo.ispaceroomcoroutineflowproject.data.models
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-import com.google.gson.annotations.SerializedName
-
+@Parcelize
 data class Genre(
-    @SerializedName("id")
     val id: Int?,
-    @SerializedName("name")
     val name: String?,
-    @SerializedName("picture")
     val picture: String?,
-    @SerializedName("picture_big")
-    val pictureBig: String?,
-    @SerializedName("picture_medium")
-    val pictureMedium: String?,
-    @SerializedName("picture_small")
-    val pictureSmall: String?,
-    @SerializedName("picture_xl")
-    val pictureXl: String?,
-    @SerializedName("type")
+    val picture_big: String?,
+    val picture_medium: String?,
+    val picture_small: String?,
+    val picture_xl: String?,
     val type: String?
-)
+):Parcelable

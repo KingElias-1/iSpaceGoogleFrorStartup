@@ -2,6 +2,11 @@ package com.messieyawo.ispaceroomcoroutineflowproject.data.models
 
 import com.google.gson.annotations.SerializedName
 
+data class Artists(
+    @SerializedName("data")
+    val artists : List<Artist?>
+)
+
 data class Artist(
     @SerializedName("id")
     val id: Int,

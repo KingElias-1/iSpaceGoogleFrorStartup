@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_artistsFragment"
+            app:destination="@id/artistsFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -27,4 +30,13 @@
         android:name="com.messieyawo.ispaceroomcoroutineflowproject.fragments.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/artistsFragment"
+        android:name="com.messieyawo.ispaceroomcoroutineflowproject.fragments.ArtistsFragment"
+        android:label="Artists"
+        tools:layout="@layout/fragment_artists" >
+        <argument
+            android:name="genre"
+            app:argType="com.messieyawo.ispaceroomcoroutineflowproject.data.models.Genre" />
+    </fragment>
 </navigation>

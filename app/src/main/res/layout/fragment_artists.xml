@@ -6,29 +6,26 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="30dp"
     android:paddingTop="10dp"
-    android:paddingBottom="20dp"
-    tools:context=".fragments.HomeFragment">
+    android:paddingBottom="10dp"
+    tools:context=".fragments.ArtistsFragment">
+
+    <TextView
+        android:id="@+id/genreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/genreRV"
+        android:id="@+id/artistRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/genre_item"/>
-
-    <TextView
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_fragment"
-        android:textSize="20sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@+id/genreTV"
+        tools:listitem="@layout/artist_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

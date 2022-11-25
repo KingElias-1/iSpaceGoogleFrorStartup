@@ -3,14 +3,18 @@ package com.messieyawo.ispaceroomcoroutineflowproject.adapters
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.messieyawo.ispaceroomcoroutineflowproject.data.models.Genres
 import com.messieyawo.ispaceroomcoroutineflowproject.databinding.GenreItemBinding
+import com.messieyawo.ispaceroomcoroutineflowproject.fragments.HomeFragment
 
 class GenreAdapter (
-    val context: Context,
-    val genres:Genres
+    private val fragment: Fragment,
+    private val context: Context,
+    private val genres:Genres
 ) : RecyclerView.Adapter<GenreAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,8 +27,17 @@ class GenreAdapter (
         holder.title.text = genre?.name
 
         Glide.with(context)
-            .load(genre?.picture)
+            .load(genre?.picture_medium)
             .into(holder.image)
+
+        holder.itemView.setOnClickListener{
+            if (fragment is HomeFragment){
+                if (genre != null) {
+                    Toast.makeText(fragment.requireActivity(), "${genre.name}", Toast.LENGTH_LONG).show()
+                    fragment.goToArtists(genre)
+                }
+            }
+        }
     }
 
     override fun getItemCount() = genres.genres.size
